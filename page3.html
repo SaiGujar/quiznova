@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile - Quiz Nova</title>
+    <style>
+        :root {
+            --primary: #ff4757;
+            --secondary: #2ed573;
+            --dark: #2f3542;
+            --light: #f1f2f6;
+            --pink-border: #ffb6c1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #e8f4fd 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            text-align: center;
+            border: 2px solid var(--pink-border);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            color: var(--primary);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .input-group {
+            width: 100%;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #57606f;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 1.05rem;
+            border: 2px solid var(--pink-border);
+            border-radius: 12px;
+            background: var(--light);
+            color: var(--dark);
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(255, 71, 87, 0.2);
+            background: white;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 14px 40px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.4);
+        }
+
+        nav.page-nav {
+            margin-top: 30px;
+            padding: 15px 25px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            border: 1px solid #eee;
+        }
+
+        nav.page-nav a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        nav.page-nav a.prev { background: #f7c6df; }
+        nav.page-nav a.next { background: #d8e8ff; }
+        nav.page-nav a.home { background: #e5e5e5; }
+        nav.page-nav a:hover { opacity: 0.85; }
+        nav.page-nav p { margin: 0; font-size: 13px; color: #666; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Create Your Nova Profile</h1>
+        <form>
+            <div class="input-group">
+                <label for="n1">Enter your name:</label>
+                <input type="text" id="n1" name="n1" placeholder="John Doe" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+
+            <a href="page4.html" class="button">Login</a>
+        </form>
+    </div>
+
+    <nav class="page-nav">
+        <a href="page2.html" class="prev">← Previous (2)</a>
+        <a href="page4.html" class="next">Next (4) →</a>
+        <a href="page1.html" class="home">Home</a>
+        <p>Page 3 of 18</p>
+    </nav>
+
+</body>
+</html>

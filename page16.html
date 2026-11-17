@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solutions - Quiz Nova</title>
+    <style>
+        :root {
+            --primary: #ff4757;
+            --secondary: #2ed573;
+            --dark: #2f3542;
+            --light: #f1f2f6;
+            --pink-border: #ffb6c1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #e8f4fd 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            max-width: 700px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 2px solid var(--pink-border);
+            text-align: left;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .solution-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #dfe4ea;
+        }
+
+        .solution-item h3 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .solution-item p {
+            font-size: 1rem;
+            color: #57606f;
+        }
+
+        .correct-answer {
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 14px 45px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.4);
+        }
+
+        nav.page-nav {
+            margin-top: 30px;
+            padding: 15px 25px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            border: 1px solid #eee;
+        }
+
+        nav.page-nav a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        nav.page-nav a.prev { background: #f7c6df; }
+        nav.page-nav a.next { background: #d8e8ff; }
+        nav.page-nav a.home { background: #e5e5e5; }
+        nav.page-nav a:hover { opacity: 0.85; }
+        nav.page-nav p { margin: 0; font-size: 13px; color: #666; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Detailed Solutions</h1>
+
+        <div class="solution-item">
+            <h3>Q1: What is the powerhouse of the cell?</h3>
+            <p>Correct Answer: <span class="correct-answer">Mitochondria</span></p>
+            <p style="margin-top: 5px; font-size: 0.9rem;">Explanation: Mitochondria generate most of the chemical energy needed to power the cell's biochemical reactions.</p>
+        </div>
+
+        <div class="solution-item">
+            <h3>Q2: Which of the following is a scalar quantity?</h3>
+            <p>Correct Answer: <span class="correct-answer">Speed</span></p>
+            <p style="margin-top: 5px; font-size: 0.9rem;">Explanation: Speed has magnitude only, whereas velocity, force, and acceleration have both magnitude and direction.</p>
+        </div>
+
+        <div class="solution-item">
+            <h3>Q3: What is the chemical symbol for Gold?</h3>
+            <p>Correct Answer: <span class="correct-answer">Au</span></p>
+            <p style="margin-top: 5px; font-size: 0.9rem;">Explanation: Au comes from the Latin word "aurum", meaning "shining dawn".</p>
+        </div>
+
+        <div class="solution-item">
+            <h3>Q4: What is the value of Pi (π) approximately?</h3>
+            <p>Correct Answer: <span class="correct-answer">3.14159</span></p>
+            <p style="margin-top: 5px; font-size: 0.9rem;">Explanation: Pi represents the ratio of a circle's circumference to its diameter.</p>
+        </div>
+
+        <div class="solution-item">
+            <h3>Q5: Which gas is most abundant in Earth's atmosphere?</h3>
+            <p>Correct Answer: <span class="correct-answer">Nitrogen</span></p>
+            <p style="margin-top: 5px; font-size: 0.9rem;">Explanation: Nitrogen makes up about 78% of Earth's atmosphere.</p>
+        </div>
+
+        <div class="btn-container">
+            <a href="page17.html" class="button">Continue</a>
+        </div>
+    </div>
+
+    <nav class="page-nav">
+        <a href="page15.html" class="prev">← Previous (15)</a>
+        <a href="page17.html" class="next">Next (17) →</a>
+        <a href="page1.html" class="home">Home</a>
+        <p>Page 16 of 18</p>
+    </nav>
+
+</body>
+</html>

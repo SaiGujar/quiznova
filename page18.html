@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard - Quiz Nova</title>
+    <style>
+        :root {
+            --primary: #ff4757;
+            --secondary: #2ed573;
+            --dark: #2f3542;
+            --light: #f1f2f6;
+            --pink-border: #ffb6c1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #e8f4fd 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            max-width: 650px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 2px solid var(--pink-border);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid #dfe4ea;
+            font-size: 1.05rem;
+        }
+
+        th {
+            background: var(--light);
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #fff5f5;
+        }
+
+        .rank-1 { color: #f1c40f; font-weight: bold; }
+        .rank-2 { color: #e67e22; font-weight: bold; }
+        .rank-3 { color: #3498db; font-weight: bold; }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 14px 45px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.4);
+        }
+
+        nav.page-nav {
+            margin-top: 30px;
+            padding: 15px 25px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            border: 1px solid #eee;
+        }
+
+        nav.page-nav a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        nav.page-nav a.prev { background: #f7c6df; }
+        nav.page-nav a.next { background: #d8e8ff; }
+        nav.page-nav a.home { background: #e5e5e5; }
+        nav.page-nav a:hover { opacity: 0.85; }
+        nav.page-nav p { margin: 0; font-size: 13px; color: #666; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏆 Leaderboard</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Student Name</th>
+                    <th>Score</th>
+                    <th>Nova Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="rank-1">1</td>
+                    <td>Alex Morgan</td>
+                    <td>100%</td>
+                    <td>240 pts</td>
+                </tr>
+                <tr>
+                    <td class="rank-2">2</td>
+                    <td>You (Quiz Star)</td>
+                    <td>100%</td>
+                    <td>220 pts</td>
+                </tr>
+                <tr>
+                    <td class="rank-3">3</td>
+                    <td>Sarah Connor</td>
+                    <td>95%</td>
+                    <td>190 pts</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>David Miller</td>
+                    <td>90%</td>
+                    <td>175 pts</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Emma Watson</td>
+                    <td>85%</td>
+                    <td>160 pts</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <a href="page18.html" class="button">Next</a>
+        </div>
+    </div>
+
+    <nav class="page-nav">
+        <a href="page16.html" class="prev">← Previous (16)</a>
+        <a href="page18.html" class="next">Next (18) →</a>
+        <a href="page1.html" class="home">Home</a>
+        <p>Page 17 of 18</p>
+    </nav>
+
+</body>
+</html>

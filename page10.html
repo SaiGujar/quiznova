@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 1 - Quiz Nova</title>
+    <style>
+        :root {
+            --primary: #ff4757;
+            --secondary: #2ed573;
+            --dark: #2f3542;
+            --light: #f1f2f6;
+            --pink-border: #ffb6c1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #e8f4fd 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            max-width: 650px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 2px solid var(--pink-border);
+            text-align: left;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 15px;
+        }
+
+        .quiz-header h2 {
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+        .badge {
+            background: #ffeaa7;
+            color: #d63031;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .question-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            padding: 14px 18px;
+            border: 2px solid #dfe4ea;
+            border-radius: 12px;
+            background: var(--light);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .option-label:hover {
+            border-color: var(--primary);
+            background: #fff5f5;
+        }
+
+        .option-label input {
+            margin-right: 15px;
+            accent-color: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 14px 45px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.4);
+        }
+
+        nav.page-nav {
+            margin-top: 30px;
+            padding: 15px 25px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            border: 1px solid #eee;
+        }
+
+        nav.page-nav a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        nav.page-nav a.prev { background: #f7c6df; }
+        nav.page-nav a.next { background: #d8e8ff; }
+        nav.page-nav a.home { background: #e5e5e5; }
+        nav.page-nav a:hover { opacity: 0.85; }
+        nav.page-nav p { margin: 0; font-size: 13px; color: #666; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="quiz-header">
+            <h2>Question 1 of 5</h2>
+            <span class="badge">+4 Marks</span>
+        </div>
+
+        <p class="question-text">What is the powerhouse of the cell?</p>
+
+        <div class="options-list">
+            <label class="option-label">
+                <input type="radio" name="q1" value="A"> Nucleus
+            </label>
+            <label class="option-label">
+                <input type="radio" name="q1" value="B"> Mitochondria
+            </label>
+            <label class="option-label">
+                <input type="radio" name="q1" value="C"> Ribosome
+            </label>
+            <label class="option-label">
+                <input type="radio" name="q1" value="D"> Golgi Apparatus
+            </label>
+        </div>
+
+        <div class="btn-container">
+            <a href="page11.html" class="button">Next Question</a>
+        </div>
+    </div>
+
+    <nav class="page-nav">
+        <a href="page9.html" class="prev">← Previous (9)</a>
+        <a href="page11.html" class="next">Next (11) →</a>
+        <a href="page1.html" class="home">Home</a>
+        <p>Page 10 of 18</p>
+    </nav>
+
+</body>
+</html>

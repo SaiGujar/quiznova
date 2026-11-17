@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructions - Quiz Nova</title>
+    <style>
+        :root {
+            --primary: #ff4757;
+            --secondary: #2ed573;
+            --dark: #2f3542;
+            --light: #f1f2f6;
+            --pink-border: #ffb6c1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #e8f4fd 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            max-width: 650px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 2px solid var(--pink-border);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        ol {
+            text-align: left;
+            display: inline-block;
+            margin: 0 auto 35px auto;
+            font-size: 1.1rem;
+            color: #57606f;
+            line-height: 2;
+            padding-left: 20px;
+        }
+
+        ol li {
+            margin-bottom: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 14px 45px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.4);
+        }
+
+        nav.page-nav {
+            margin-top: 30px;
+            padding: 15px 25px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            border: 1px solid #eee;
+        }
+
+        nav.page-nav a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        nav.page-nav a.prev { background: #f7c6df; }
+        nav.page-nav a.next { background: #d8e8ff; }
+        nav.page-nav a.home { background: #e5e5e5; }
+        nav.page-nav a:hover { opacity: 0.85; }
+        nav.page-nav p { margin: 0; font-size: 13px; color: #666; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>QUIZ NOVA</h1>
+        <h2>QUIZ RULES</h2>
+
+        <ol>
+            <li>Read every question carefully</li>
+            <li>Select only one answer</li>
+            <li>Correct answer = Nova Points (+4 Marks)</li>
+            <li>Try to complete the quiz on time</li>
+            <li>Have fun and challenge yourself</li>
+        </ol>
+
+        <div>
+            <a href="page10.html" class="button">I am Ready!</a>
+        </div>
+    </div>
+
+    <nav class="page-nav">
+        <a href="page8.html" class="prev">← Previous (8)</a>
+        <a href="page10.html" class="next">Next (10) →</a>
+        <a href="page1.html" class="home">Home</a>
+        <p>Page 9 of 18</p>
+    </nav>
+
+</body>
+</html>
